@@ -1,0 +1,42 @@
+.card-container {
+  border: 1px solid darkgrey;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 0px;
+  display: flex;
+  position: relative;
+}
+
+.telephone-symbol {
+  color: grey;
+  margin: auto 10px;
+}
+
+.call-history > p {
+  margin: 5px 0px;
+}
+
+.via {
+  color: darkgrey;
+  font-size: 0.6rem;
+}
+
+.time {
+  position: absolute;
+  right: -1px;
+  top: 40%;
+  font-weight: bold;
+  color: darkgray;
+  font-size: 10px;
+}
+
+.am-pm {
+  border: 0.2px solid darkgrey;
+  margin-left: 7px;
+  padding: 2px;
+  font-size: 0.5rem;
+}
+
+.archive-button {
+  background-color: rgba(0, 0, 0, 0.1);
+}
