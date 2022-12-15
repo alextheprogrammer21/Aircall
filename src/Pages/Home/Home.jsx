@@ -26,9 +26,12 @@ const Home = () => {
   const [calls, setCalls] = useState(INITIAL_STATE);
   const [showArchived, setShowArchived] = useState(false);
   useEffect(() => {
-    fetch("https://aircall-job.herokuapp.com/activities", {
-      method: "GET",
-    })
+    fetch(
+      "https://charming-bat-singlet.cyclic.app/https://cerulean-marlin-wig.cyclic.app/activities",
+      {
+        method: "GET",
+      }
+    )
       .then((response) => response.json())
       .then((result) => {
         const list = parseCallDates(result);

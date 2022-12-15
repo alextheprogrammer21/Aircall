@@ -9,9 +9,10 @@
   "license": "",
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
-    "predeploy": "npm run build",
+    "predeploy": "npm run customBuild",
     "deploy": "gh-pages -d build",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "customBuild": "react-scripts build"
   },
   "dependencies": {
     "react": "18.0.0",

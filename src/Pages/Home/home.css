@@ -16,3 +16,7 @@ button {
   font-weight: bold;
   color: darkgrey;
 }
+
+.container {
+  overflow-y: auto;
+}

@@ -16,11 +16,14 @@ const Call = ({ card, updateCalls }) => {
   } = card;
 
   const updateArchive = () => {
-    fetch(`https://aircall-job.herokuapp.com/activities/${id}`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ is_archived: !is_archived }),
-    })
+    fetch(
+      `https://charming-bat-singlet.cyclic.app/https://cerulean-marlin-wig.cyclic.app/activities/${id}`,
+      {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ is_archived: !is_archived }),
+      }
+    )
       .then((response) => response.json())
       .then((result) => {
         console.log("RESULT ", result);
