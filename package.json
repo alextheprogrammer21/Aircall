@@ -15,8 +15,10 @@
     "customBuild": "react-scripts build"
   },
   "dependencies": {
+    "jquery": "^3.6.3",
     "react": "18.0.0",
-    "react-dom": "18.0.0"
+    "react-dom": "18.0.0",
+    "react-spinners": "^0.13.7"
   },
   "devDependencies": {
     "babel-core": "6.26.*",

@@ -20,3 +20,8 @@ button {
 .container {
   overflow-y: auto;
 }
+
+.overlay {
+  cursor: wait;
+  opacity: 40%;
+}

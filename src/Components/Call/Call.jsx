@@ -1,8 +1,9 @@
 import React from "react";
+import $ from "jquery";
 
 import "./call.css";
 
-const Call = ({ card, updateCalls }) => {
+const Call = ({ card, updateCalls, setLoading }) => {
   const {
     call_type,
     created_at,
@@ -16,6 +17,8 @@ const Call = ({ card, updateCalls }) => {
   } = card;
 
   const updateArchive = () => {
+    setLoading(true);
+    $(".container").addClass("overlay");
     fetch(
       `https://charming-bat-singlet.cyclic.app/https://cerulean-marlin-wig.cyclic.app/activities/${id}`,
       {
