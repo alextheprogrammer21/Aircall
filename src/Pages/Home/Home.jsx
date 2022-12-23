@@ -25,6 +25,7 @@ const parseCallDates = (calls) => {
 const Home = () => {
   const [calls, setCalls] = useState(INITIAL_STATE);
   const [showArchived, setShowArchived] = useState(false);
+  const [refresh, setRefresh] = useState(false);
   useEffect(() => {
     fetch(
       "https://charming-bat-singlet.cyclic.app/https://cerulean-marlin-wig.cyclic.app/activities",
@@ -45,13 +46,14 @@ const Home = () => {
         });
         console.error("Error:", error);
       });
-  }, []);
+  }, [refresh]);
 
   function updateCalls(result) {
-    const date = result.created_at.split("T")[0];
-    const updateValue = calls.list[date].find(({ id }) => id === result.id);
-    updateValue.is_archived = result.is_archived;
-    setCalls({ list: calls.list, length: calls.length, error: calls.error });
+    setRefresh(!refresh);
+    // =    const date = result.created_at.split("T")[0];
+    //     const updateValue = calls.list[date].find(({ id }) => id === result.id);
+    //     updateValue.is_archived = result.is_archived;
+    //     setCalls({ list: calls.list, length: calls.length, error: calls.error });
   }
 
   const dateMap = (list) => {

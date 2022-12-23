@@ -24,9 +24,8 @@ const Call = ({ card, updateCalls }) => {
         body: JSON.stringify({ is_archived: !is_archived }),
       }
     )
-      .then((response) => response.json())
+      // .then((response) => response.json())
       .then((result) => {
-        console.log("RESULT ", result);
         updateCalls(result);
       })
       .catch((error) => {
