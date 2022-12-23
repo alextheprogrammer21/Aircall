@@ -25,3 +25,7 @@ button {
   cursor: wait;
   opacity: 40%;
 }
+
+.selected {
+  color: black;
+}

@@ -88,8 +88,18 @@ const Home = () => {
   return (
     <main className="container-view">
       <section className="tabs">
-        <button onClick={() => setShowArchived(false)}>Inbox</button>
-        <button onClick={() => setShowArchived(true)}>Archived</button>
+        <button
+          className={showArchived ? "" : "selected"}
+          onClick={() => setShowArchived(false)}
+        >
+          Inbox
+        </button>
+        <button
+          className={showArchived ? "selected" : ""}
+          onClick={() => setShowArchived(true)}
+        >
+          Archived
+        </button>
       </section>
       {calls.length > 0 ? (
         dateMap(calls.list).map((date, index) => {
